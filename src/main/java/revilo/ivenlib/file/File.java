@@ -1,6 +1,6 @@
 package revilo.ivenlib.file;
 
-import revilo.ivenlib.IvanLib;
+import revilo.ivenlib.IvenLib;
 
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -20,14 +20,14 @@ public class File {
     public File(String path) {
         this.file = new java.io.File(path);
         if (this.file.isDirectory()) {
-            IvanLib.LOGGER.info("We would recommend the Folder class for a directory.");
+            IvenLib.LOGGER.info("We would recommend the Folder class for a directory.");
         }
     }
 
     public File(java.io.File file) {
         this.file = file;
         if (this.file.isDirectory()) {
-            IvanLib.LOGGER.info("We would recommend the Folder class for a directory.");
+            IvenLib.LOGGER.info("We would recommend the Folder class for a directory.");
         }
     }
 
@@ -44,9 +44,9 @@ public class File {
                 writer.write(pieces);
             }
             writer.close();
-            IvanLib.LOGGER.debug("Successfully wrote to {}.", file);
+            IvenLib.LOGGER.debug("Successfully wrote to {}.", file);
         } catch (IOException e) {
-            IvanLib.LOGGER.error("Error occurred. {}", e.getMessage());
+            IvenLib.LOGGER.error("Error occurred. {}", e.getMessage());
         }
     }
 
@@ -59,7 +59,7 @@ public class File {
             }
             return data;
         } catch (FileNotFoundException e) {
-            IvanLib.LOGGER.error("Error occurred. {}", e.getMessage());
+            IvenLib.LOGGER.error("Error occurred. {}", e.getMessage());
             return null;
         }
     }

@@ -1,6 +1,6 @@
 package revilo.ivenlib.file;
 
-import revilo.ivenlib.IvanLib;
+import revilo.ivenlib.IvenLib;
 
 import java.io.IOException;
 import java.util.List;
@@ -13,7 +13,7 @@ public class Folder {
         if (new File(path).getFile().isDirectory()) {
             folder = new File(path);
         } else {
-            IvanLib.LOGGER.error("File is not a folder!");
+            IvenLib.LOGGER.error("File is not a folder!");
         }
     }
 
@@ -21,7 +21,7 @@ public class Folder {
         if (file.getFile().isDirectory()) {
             folder = file;
         } else {
-            IvanLib.LOGGER.error("File is not a folder!");
+            IvenLib.LOGGER.error("File is not a folder!");
         }
     }
 
@@ -38,7 +38,7 @@ public class Folder {
             java.io.File file = new java.io.File(folder.getFile().getPath(), name);
             file.createNewFile();
         } catch (IOException e) {
-            IvanLib.LOGGER.error("Failed to create file!");
+            IvenLib.LOGGER.error("Failed to create file!");
         }
     }
 
@@ -48,7 +48,7 @@ public class Folder {
             file.getFile().createNewFile();
             file.write(data);
         } catch (IOException e) {
-            IvanLib.LOGGER.error("Failed to create file!");
+            IvenLib.LOGGER.error("Failed to create file!");
         }
     }
 }
