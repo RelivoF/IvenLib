@@ -1,6 +1,6 @@
-package revilo.ivanlib.file;
+package revilo.ivenlib.file;
 
-import revilo.ivanlib.IvanLib;
+import revilo.ivenlib.IvanLib;
 
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
