@@ -67,4 +67,12 @@ public class File {
     public java.io.File getFile() {
         return file;
     }
+
+    public void create() {
+        try {
+            file.createNewFile();
+        } catch (IOException e) {
+            IvenLib.LOGGER.error("Could not create file!");
+        }
+    }
 }

@@ -25,6 +25,14 @@ public class Folder {
         }
     }
 
+    public Folder(java.io.File file) {
+        if (file.isDirectory()) {
+            folder = new File(file);
+        } else {
+            IvenLib.LOGGER.error("File is not a folder!");
+        }
+    }
+
     public java.io.File[] getContained() {
         return folder.getFile().listFiles();
     }
